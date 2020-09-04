@@ -14,7 +14,7 @@ RUN \
 	wget -q https://github.com/subchen/frep/releases/download/v1.3.5/frep-1.3.5-linux-amd64 -O /usr/bin/frep && \
 	apt-dpkg-wrap apt-get --purge remove -y wget && \
 	#echo "deb [trusted=yes] https://deb.vatchit.in/stable ./" > /etc/apt/sources.list.d/jitsi.list && \
-	echo "deb http://ftp.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/backports.list && \
+	sudo echo "deb http://ftp.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/backports.list && \
 	apt-dpkg-wrap apt-get update && \
 	apt-dpkg-wrap apt-get dist-upgrade -y && \
 	apt-cleanup && \
