@@ -34,4 +34,5 @@ RUN \
 	apt-dpkg-wrap apt-get install -y openjdk-8-jre-headless && \
 	apt-cleanup
 
+
 ENTRYPOINT [ "/init" ]
