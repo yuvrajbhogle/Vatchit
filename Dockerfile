@@ -6,7 +6,8 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 
 COPY rootfs /
 
-RUN \
+RUN \   
+	groupadd -g 1000 AB_DOCKER_SETUP_GROUP \
 	apt-dpkg-wrap apt-get update && \
 	apt-dpkg-wrap apt-get install -y apt-transport-https apt-utils ca-certificates gnupg && \
 	apt-dpkg-wrap apt-get install -y wget && \
